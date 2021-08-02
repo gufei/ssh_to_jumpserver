@@ -7,6 +7,7 @@ trap {
  stty rows $rows columns $cols < $spawn_out(slave,name)
 } WINCH
 
+# 这里如果报错，就把curPath定义为这个项目的目录地址即可，或者在下边直接绝对路径定义ga命令
 curPath=$(readlink -f "$(dirname "$0")")
 
 # 获取google code的脚本
